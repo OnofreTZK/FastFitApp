@@ -1,3 +1,4 @@
+import 'package:fastfit/app/modules/login/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'home_controller.dart';
@@ -17,15 +18,14 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
       appBar: AppBar(
         title: Text('Counter'),
       ),
-      body: StreamBuilder(
-        stream: store.counterStream,
-        builder: (context, snapshot) => Text('${snapshot.data}'),
-      ),
-      floatingActionButton: FloatingActionButton(
+      body: ElevatedButton(
+        child: Text('FlatButton Ativo'),
         onPressed: () {
-          store.increment();
+          Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
         },
-        child: Icon(Icons.add),
+        style: ElevatedButton.styleFrom(
+          primary: Colors.brown[700],
+        ),
       ),
     );
   }
