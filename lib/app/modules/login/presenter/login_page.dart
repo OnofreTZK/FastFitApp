@@ -29,7 +29,9 @@ class _LoginPageState extends State<LoginPage> {
             ),
             ElevatedButton(
               child: Text('Login'),
-              onPressed: () {},
+              onPressed: () {
+                Modular.to.pushNamed('/register/');
+              },
               style: ElevatedButton.styleFrom(
                 primary: Colors.brown[700], 
                 padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
