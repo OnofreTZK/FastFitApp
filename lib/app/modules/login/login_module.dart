@@ -1,4 +1,4 @@
-import 'package:fastfit/app/modules/login/login_page.dart';
+import 'package:fastfit/app/modules/login/presenter/login_page.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 class LoginModule extends Module {
