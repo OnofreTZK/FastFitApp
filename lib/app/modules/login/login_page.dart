@@ -31,13 +31,21 @@ class _LoginPageState extends State<LoginPage> {
               child: Text('Login'),
               onPressed: () {},
               style: ElevatedButton.styleFrom(
-                primary: Colors.brown[700], 
-                padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-                textStyle: TextStyle(
-                  fontSize: 20,
-                )
-                       
-              ),
+                  primary: Colors.brown[700],
+                  padding: EdgeInsets.symmetric(horizontal: 70, vertical: 10),
+                  textStyle: TextStyle(
+                    fontSize: 20,
+                  )),
+            ),
+            ElevatedButton(
+              child: Text('Registro'),
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                  primary: Colors.brown[700],
+                  padding: EdgeInsets.symmetric(horizontal: 60, vertical: 10),
+                  textStyle: TextStyle(
+                    fontSize: 20,
+                  )),
             ),
           ],
         ),
