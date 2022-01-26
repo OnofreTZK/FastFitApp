@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
   final String title;
@@ -13,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.blueGrey[900],
       body: SafeArea(
         child: Column(
           mainAxisSize: MainAxisSize.max,
@@ -27,7 +28,7 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Card(
                     clipBehavior: Clip.antiAliasWithSaveLayer,
-                    color: Colors.green[800],
+                    color: Colors.black,
                     elevation: 2,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(40),
@@ -35,19 +36,20 @@ class _HomePageState extends State<HomePage> {
                     child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(2, 2, 2, 2),
                       child: Container(
-                        width: 60,
-                        height: 60,
+                        width: 70,
+                        height: 70,
                         clipBehavior: Clip.antiAlias,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                         ),
                         child: Image.asset(
-                          'assets/images/profilepic3.png',
+                          'assets/images/profilepic.png',
                         ),
                       ),
                     ),
                   ),
-                  Padding(
+                  //LOGO DO APP
+                  /*Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
                     child: Image.asset(
                       'assets/images/logofastfit.png',
@@ -55,7 +57,7 @@ class _HomePageState extends State<HomePage> {
                       height: 40,
                       fit: BoxFit.fitWidth,
                     ),
-                  )
+                  )*/
                 ],
               ),
             ),
@@ -68,10 +70,8 @@ class _HomePageState extends State<HomePage> {
                     padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
                     child: Text(
                       'Bem vindo',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 30,
-                      ),
+                      style: GoogleFonts.poppins(
+                          color: Colors.white, fontSize: 50),
                     ),
                   )
                 ],
@@ -86,7 +86,8 @@ class _HomePageState extends State<HomePage> {
                     padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 4),
                     child: Text(
                       'Usuário',
-                      style: TextStyle(color: Colors.grey, fontSize: 30),
+                      style:
+                          GoogleFonts.poppins(color: Colors.grey, fontSize: 35),
                     ),
                   )
                 ],
@@ -110,7 +111,7 @@ class _HomePageState extends State<HomePage> {
                           width: MediaQuery.of(context).size.width * 0.8,
                           height: 100,
                           decoration: BoxDecoration(
-                            color: Colors.green.shade200,
+                            color: Colors.blueGrey[600],
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: InkWell(
@@ -135,11 +136,10 @@ class _HomePageState extends State<HomePage> {
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       20, 0, 0, 0),
-                                  child: Image.asset(
-                                    'assets/images/peso.png',
-                                    width: 60,
-                                    height: 60,
-                                    fit: BoxFit.cover,
+                                  child: Icon(
+                                    Icons.fitness_center_outlined,
+                                    size: 50,
+                                    color: Colors.white,
                                   ),
                                 ),
                                 Expanded(
@@ -156,7 +156,12 @@ class _HomePageState extends State<HomePage> {
                                         Text(
                                           'TREINOS',
                                           textAlign: TextAlign.start,
-                                          style: TextStyle(color: Colors.white, fontSize: 30),
+                                          style: GoogleFonts.poppins(
+                                              color: Colors.white,
+                                              fontSize: 30,
+                                              textStyle: Theme.of(context)
+                                                  .textTheme
+                                                  .headline6),
                                         ),
                                       ],
                                     ),
@@ -172,7 +177,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-          Padding(
+            Padding(
               padding: EdgeInsetsDirectional.fromSTEB(40, 10, 0, 0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
@@ -190,7 +195,7 @@ class _HomePageState extends State<HomePage> {
                           width: MediaQuery.of(context).size.width * 0.8,
                           height: 100,
                           decoration: BoxDecoration(
-                            color: Colors.green.shade200,
+                            color: Colors.blueGrey[600],
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: InkWell(
@@ -215,17 +220,16 @@ class _HomePageState extends State<HomePage> {
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       20, 0, 0, 0),
-                                  child: Image.asset(
-                                    'assets/images/user_image.png',
-                                    width: 60,
-                                    height: 60,
-                                    fit: BoxFit.cover,
+                                  child: Icon(
+                                    Icons.account_circle_outlined,
+                                    size: 50,
+                                    color: Colors.white,
                                   ),
                                 ),
                                 Expanded(
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        50, 0, 22, 0),
+                                        40, 0, 22, 0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
@@ -236,7 +240,12 @@ class _HomePageState extends State<HomePage> {
                                         Text(
                                           'PERFIL',
                                           textAlign: TextAlign.start,
-                                          style: TextStyle(color: Colors.white, fontSize: 30),
+                                          style: GoogleFonts.poppins(
+                                              color: Colors.white,
+                                              fontSize: 30,
+                                              textStyle: Theme.of(context)
+                                                  .textTheme
+                                                  .headline6),
                                         ),
                                       ],
                                     ),
@@ -251,7 +260,91 @@ class _HomePageState extends State<HomePage> {
                   )
                 ],
               ),
-            ), 
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(40, 10, 0, 0),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Material(
+                        color: Colors.transparent,
+                        elevation: 3,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: Container(
+                          width: MediaQuery.of(context).size.width * 0.8,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            color: Colors.blueGrey[600],
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: InkWell(
+                            onTap: () async {
+                              await showModalBottomSheet(
+                                  isScrollControlled: true,
+                                  context: context,
+                                  builder: (context) {
+                                    return Padding(
+                                      padding:
+                                          MediaQuery.of(context).viewInsets,
+                                      child: Container(
+                                        height: 720,
+                                        //child: COLOCAR QUAL WIDGET VAI SER ENCAMINHADO
+                                      ),
+                                    );
+                                  });
+                            },
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      20, 0, 0, 0),
+                                  child: Icon(
+                                    Icons.question_answer_outlined,
+                                    size: 50,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        40, 0, 22, 0),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'CHAT',
+                                          textAlign: TextAlign.start,
+                                          style: GoogleFonts.poppins(
+                                              color: Colors.white,
+                                              fontSize: 30,
+                                              textStyle: Theme.of(context)
+                                                  .textTheme
+                                                  .headline6),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       ),
