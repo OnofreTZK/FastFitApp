@@ -1,7 +1,10 @@
+import 'package:fastfit/app/modules/login/loginAuthentication_module.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+
+import 'login_authentication.dart';
 
 class LoginPage extends StatefulWidget {
   final String title;
@@ -20,9 +23,18 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Image(
-              image: AssetImage('assets/images/gym2.jpg'),
-              height: 500,
+            Container(
+              child: Column(children: const [
+                Image(
+                  image: AssetImage('assets/images/gym2.jpg'),
+                  fit: BoxFit.fitWidth,
+                  height: 500,
+                ),
+                Align(
+                  alignment: Alignment.center,
+                  child: Text('Bem vindo ao aplicativo FastFit', style: TextStyle(color: Colors.white, fontSize: 25), ),
+                ),
+              ]),
             ),
             SizedBox(
               height: 50,
@@ -30,16 +42,27 @@ class _LoginPageState extends State<LoginPage> {
             ElevatedButton(
               child: Text('Login'),
               onPressed: () {
+                //Navigator.push(context, MaterialPageRoute(builder: (context) => LoginAuthenticationPage()));
+                Modular.to.pushNamed('/authentication/');
+              },
+              style: ElevatedButton.styleFrom(
+                  primary: Colors.brown[700],
+                  padding: EdgeInsets.symmetric(horizontal: 60, vertical: 10),
+                  textStyle: TextStyle(
+                    fontSize: 20,
+                  )),
+            ),
+            ElevatedButton(
+              child: Text('Registro'),
+              onPressed: () {
                 Modular.to.pushNamed('/register/');
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.brown[700], 
-                padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-                textStyle: TextStyle(
-                  fontSize: 20,
-                )
-                       
-              ),
+                  primary: Colors.brown[700],
+                  padding: EdgeInsets.symmetric(horizontal: 60, vertical: 10),
+                  textStyle: TextStyle(
+                    fontSize: 20,
+                  )),
             ),
           ],
         ),
