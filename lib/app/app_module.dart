@@ -2,6 +2,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import './modules/login/login_module.dart';
 import './modules/register/register_module.dart';
 import './modules/login/loginAuthentication_module.dart';
+import 'modules/profile/profile_module.dart';
 
 class AppModule extends Module {
   @override
@@ -18,6 +19,11 @@ class AppModule extends Module {
     ModuleRoute(
         '/register', 
         module: RegisterModule(),
+        transition: TransitionType.fadeIn,
+    ),
+    ModuleRoute(
+        '/profile', 
+        module: ProfileModule(),
         transition: TransitionType.fadeIn,
     ),
   ];

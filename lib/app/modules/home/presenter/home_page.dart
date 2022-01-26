@@ -94,7 +94,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(40, 60, 20, 0),
+              padding: EdgeInsetsDirectional.fromSTEB(20, 60, 10, 0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -108,7 +108,7 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Container(
-                          width: MediaQuery.of(context).size.width * 0.8,
+                          width: MediaQuery.of(context).size.width * 0.9,
                           height: 100,
                           decoration: BoxDecoration(
                             color: Colors.blueGrey[600],
@@ -178,7 +178,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(40, 10, 0, 0),
+              padding: EdgeInsetsDirectional.fromSTEB(20, 10, 0, 0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -192,7 +192,7 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Container(
-                          width: MediaQuery.of(context).size.width * 0.8,
+                          width: MediaQuery.of(context).size.width * 0.9,
                           height: 100,
                           decoration: BoxDecoration(
                             color: Colors.blueGrey[600],
@@ -200,6 +200,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           child: InkWell(
                             onTap: () async {
+                              Modular.to.pushNamed('/profile/');
                               await showModalBottomSheet(
                                   isScrollControlled: true,
                                   context: context,
@@ -262,7 +263,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(40, 10, 0, 0),
+              padding: EdgeInsetsDirectional.fromSTEB(20, 10, 0, 0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -276,7 +277,7 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Container(
-                          width: MediaQuery.of(context).size.width * 0.8,
+                          width: MediaQuery.of(context).size.width * 0.9,
                           height: 100,
                           decoration: BoxDecoration(
                             color: Colors.blueGrey[600],
