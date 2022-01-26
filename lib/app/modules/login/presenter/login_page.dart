@@ -46,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
                 Modular.to.pushNamed('/authentication/');
               },
               style: ElevatedButton.styleFrom(
-                  primary: Colors.brown[700],
+                  primary: Colors.white,
                   padding: EdgeInsets.symmetric(horizontal: 60, vertical: 10),
                   textStyle: TextStyle(
                     fontSize: 20,
@@ -58,7 +58,7 @@ class _LoginPageState extends State<LoginPage> {
                 Modular.to.pushNamed('/register/');
               },
               style: ElevatedButton.styleFrom(
-                  primary: Colors.brown[700],
+                  primary: Colors.white,
                   padding: EdgeInsets.symmetric(horizontal: 60, vertical: 10),
                   textStyle: TextStyle(
                     fontSize: 20,
