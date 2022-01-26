@@ -40,7 +40,12 @@ class _LoginPageState extends State<LoginPage> {
               height: 50,
             ),
             ElevatedButton(
-              child: Text('Login'),
+              child: Text(
+                  'Login',
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
               onPressed: () {
                 //Navigator.push(context, MaterialPageRoute(builder: (context) => LoginAuthenticationPage()));
                 Modular.to.pushNamed('/authentication/');
@@ -53,7 +58,12 @@ class _LoginPageState extends State<LoginPage> {
                   )),
             ),
             ElevatedButton(
-              child: Text('Registro'),
+              child: Text(
+                  'Registro',
+                  style: TextStyle(
+                    color: Colors.black, 
+                  ),
+                ),
               onPressed: () {
                 Modular.to.pushNamed('/register/');
               },
