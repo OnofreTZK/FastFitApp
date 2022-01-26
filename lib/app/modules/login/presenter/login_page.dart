@@ -1,10 +1,7 @@
-import 'package:fastfit/app/modules/login/loginAuthentication_module.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-
-import 'login_authentication.dart';
 
 class LoginPage extends StatefulWidget {
   final String title;

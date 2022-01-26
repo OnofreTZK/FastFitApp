@@ -1,7 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import './modules/login/login_module.dart';
 import './modules/register/register_module.dart';
-import './modules/login/loginAuthentication_module.dart';
+import './modules/authentication/login_authentication_module.dart';
 
 class AppModule extends Module {
   @override
