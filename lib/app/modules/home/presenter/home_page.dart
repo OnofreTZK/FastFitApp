@@ -116,6 +116,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           child: InkWell(
                             onTap: () async {
+                              Modular.to.pushNamed('/listaFichas/');
                               await showModalBottomSheet(
                                   isScrollControlled: true,
                                   context: context,
