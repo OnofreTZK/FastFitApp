@@ -5,7 +5,7 @@ import '../repositories/interface_update_user_repository.dart';
 
 // Interface to make easier tests
 abstract class IUpdateUser {
-    Future<bool> call({@required IUser user})
+    Future<bool> call({@required IUser user});
 }
 
 class UpdateUserImpl {

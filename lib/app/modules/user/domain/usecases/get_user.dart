@@ -5,7 +5,7 @@ import '../repositories/interface_get_user_repository.dart';
 
 // Interface to make easier tests
 abstract class IGetUser {
-    Future<IUser> call({@required String email})
+    Future<IUser> call({@required String email});
 }
 
 class GetUserImpl {

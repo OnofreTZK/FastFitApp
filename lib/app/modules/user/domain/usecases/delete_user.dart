@@ -5,7 +5,7 @@ import '../repositories/interface_delete_user_repository.dart';
 
 // Interface to make easier tests
 abstract class IDeleteUser {
-    Future<bool> call({@required String userId})
+    Future<bool> call({@required String userId});
 }
 
 class DeleteUserImpl {

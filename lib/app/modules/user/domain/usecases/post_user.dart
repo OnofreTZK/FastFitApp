@@ -5,7 +5,7 @@ import '../repositories/interface_post_user_repository.dart';
 
 // Interface to make easier tests
 abstract class IGetUser {
-    Future<bool> call({@required IUser user})
+    Future<bool> call({@required IUser user});
 }
 
 class PostUserImpl {
