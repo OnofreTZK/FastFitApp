@@ -45,16 +45,21 @@ class _LoginAuthenticationPageState extends State<LoginAuthenticationPage> {
                     labelStyle: TextStyle(color: Colors.white),
                     labelText: 'E-mail',
                     hintStyle: TextStyle(color: Colors.white),
-                    hintText: 'Entre com um e-mail válido'),
-              ),
-            ),
+                    hintText: 'Entre com um e-mail válido'
+                ), // InputDecoration
+                style: TextStyle(
+                    color: Color(0xFFFFFFFF),
+                ), // TextStyle
+                textInputAction: TextInputAction.next,
+              ), // TextField
+            ), // Padding
             Padding(
               padding: const EdgeInsets.only(
                   left: 15.0, right: 15.0, top: 15, bottom: 0),
               //padding: EdgeInsets.symmetric(horizontal: 15),
-
               child: TextField(
-                obscureText: true,
+                obscureText: true, // In the future will controlled by the controller
+                obscuringCharacter: '*',
                 decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.white),
@@ -63,9 +68,14 @@ class _LoginAuthenticationPageState extends State<LoginAuthenticationPage> {
                     labelStyle: TextStyle(color: Colors.white),
                     labelText: 'Senha',
                     hintStyle: TextStyle(color: Colors.white),
-                    hintText: 'Digite sua senha'),
-              ),
-            ),
+                    hintText: 'Digite sua senha'
+                ), // InputDecoration,
+                style: TextStyle(
+                    color: Color(0xFFFFFFFF),
+                ), // TextStyle
+                textInputAction: TextInputAction.done,
+              ), // TextField
+            ), // Padding
             TextButton(
               onPressed: () {
                 //TODO FORGOT PASSWORD SCREEN GOES HERE
@@ -90,11 +100,11 @@ class _LoginAuthenticationPageState extends State<LoginAuthenticationPage> {
                   style: TextStyle(color: Colors.black, fontSize: 25),
                 ),
               ),
-            ),
+            ), // Container
             SizedBox(
               height: 50,
             ),
-            Text('Novo Usuário? Crie sua conta')
+            Text('Novo Usuário? Crie sua conta!'),
           ],
         ),
       ),
