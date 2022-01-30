@@ -50,6 +50,9 @@ class _RegisterPageState extends ModularState<RegisterPage, RegisterBloc> {
                     hintStyle: TextStyle(color: Colors.white),
                     hintText: 'Entre com um e-mail válido'
                     ), //InputDecoration
+                    style: TextStyle(
+                      color: Colors.white,
+                    ), //TextStyle
               ), //TextField
             ), // Padding
             Padding(
@@ -70,6 +73,9 @@ class _RegisterPageState extends ModularState<RegisterPage, RegisterBloc> {
                     hintStyle: TextStyle(color: Colors.white),
                     hintText: 'Digite sua senha'
                     ), //InputDecoration
+                    style: TextStyle(
+                      color: Colors.white,
+                    ), //TextStyle
               ), //TextField
             ), //Padding
             Padding(
@@ -90,6 +96,9 @@ class _RegisterPageState extends ModularState<RegisterPage, RegisterBloc> {
                     hintStyle: TextStyle(color: Colors.white),
                     hintText: 'Digite sua senha'
                     ), // InputDecoration
+                    style: TextStyle(
+                      color: Colors.white,
+                    ), //TextStyle
               ), // TextField
             ), // Padding
             SizedBox(
