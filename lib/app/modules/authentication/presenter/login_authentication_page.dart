@@ -45,10 +45,9 @@ class _LoginAuthenticationPageState extends State<LoginAuthenticationPage> {
                     labelStyle: TextStyle(color: Colors.white),
                     labelText: 'E-mail',
                     hintStyle: TextStyle(color: Colors.white),
-                    hintText: 'Entre com um e-mail válido'
-                ), // InputDecoration
+                    hintText: 'Entre com um e-mail válido'), // InputDecoration
                 style: TextStyle(
-                    color: Color(0xFFFFFFFF),
+                  color: Color(0xFFFFFFFF),
                 ), // TextStyle
                 textInputAction: TextInputAction.next,
               ), // TextField
@@ -58,7 +57,8 @@ class _LoginAuthenticationPageState extends State<LoginAuthenticationPage> {
                   left: 15.0, right: 15.0, top: 15, bottom: 0),
               //padding: EdgeInsets.symmetric(horizontal: 15),
               child: TextField(
-                obscureText: true, // In the future will controlled by the controller
+                obscureText:
+                    true, // In the future will controlled by the controller
                 obscuringCharacter: '*',
                 decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
@@ -69,16 +69,17 @@ class _LoginAuthenticationPageState extends State<LoginAuthenticationPage> {
                     labelText: 'Senha',
                     hintStyle: TextStyle(color: Colors.white),
                     hintText: 'Digite sua senha',
-                    suffixIcon: InkWell(
-                      child: Icon(
-                        Icons.visibility,
-                        size: 30,
-                        color: Colors.white,
-                      ),
-                    ),    
-                ), // InputDecoration,
+                    suffixIcon: IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.visibility,
+                          size: 30,
+                          color: Colors.white,
+                        )//Icon
+                      )//IconButton
+                    ), // InputDecoration,
                 style: TextStyle(
-                    color: Color(0xFFFFFFFF),
+                  color: Color(0xFFFFFFFF),
                 ), // TextStyle
                 textInputAction: TextInputAction.done,
               ), // TextField
@@ -99,8 +100,8 @@ class _LoginAuthenticationPageState extends State<LoginAuthenticationPage> {
                   color: Colors.white, borderRadius: BorderRadius.circular(20)),
               child: TextButton(
                 onPressed: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => HomePage())); 
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomePage()));
                 },
                 child: Text(
                   'Login',

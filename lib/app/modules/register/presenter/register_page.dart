@@ -67,22 +67,23 @@ class _RegisterPageState extends ModularState<RegisterPage, RegisterBloc> {
               child: TextField(
                 obscureText: true,
                 decoration: InputDecoration(
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
-                  ), //OutlineInputBorder
-                  border: OutlineInputBorder(),
-                  labelStyle: TextStyle(color: Colors.white),
-                  labelText: 'Senha',
-                  hintStyle: TextStyle(color: Colors.white),
-                  hintText: 'Digite sua senha',
-                  suffixIcon: InkWell(
-                    child: Icon(
-                      Icons.visibility,
-                      size: 30,
-                      color: Colors.white,
-                    ),
-                  ),
-                ), //InputDecoration
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white),
+                    ), //OutlineInputBorder
+                    border: OutlineInputBorder(),
+                    labelStyle: TextStyle(color: Colors.white),
+                    labelText: 'Senha',
+                    hintStyle: TextStyle(color: Colors.white),
+                    hintText: 'Digite sua senha',
+                    suffixIcon: IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.visibility,
+                          size: 30,
+                          color: Colors.white,
+                        ) //Icon
+                      ) //IconButton
+                    ), //InputDecoration
                 style: TextStyle(
                   color: Colors.white,
                 ), //TextStyle
@@ -99,22 +100,23 @@ class _RegisterPageState extends ModularState<RegisterPage, RegisterBloc> {
               child: TextField(
                 obscureText: true,
                 decoration: InputDecoration(
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
-                  ), //OutlineInputBorder
-                  border: OutlineInputBorder(),
-                  labelStyle: TextStyle(color: Colors.white),
-                  labelText: 'Confirme sua senha',
-                  hintStyle: TextStyle(color: Colors.white),
-                  hintText: 'Digite sua senha',
-                  suffixIcon: InkWell(
-                    child: Icon(
-                      Icons.visibility,
-                      size: 30,
-                      color: Colors.white,
-                    ),
-                  ),
-                ), // InputDecoration
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white),
+                    ), //OutlineInputBorder
+                    border: OutlineInputBorder(),
+                    labelStyle: TextStyle(color: Colors.white),
+                    labelText: 'Confirme sua senha',
+                    hintStyle: TextStyle(color: Colors.white),
+                    hintText: 'Digite sua senha',
+                    suffixIcon: IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.visibility,
+                          size: 30,
+                          color: Colors.white,
+                        ) //Icon
+                        ) //IconButton
+                    ), // InputDecoration
                 style: TextStyle(
                   color: Colors.white,
                 ), //TextStyle
