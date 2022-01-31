@@ -1,7 +1,7 @@
 import 'package:fastfit/app/modules/listaFichas/presenter/lista_page.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-class ListaFichaModulo extends Module {
+class ListaFichaModule extends Module {
   @override
   List<Bind> binds = [];
 
