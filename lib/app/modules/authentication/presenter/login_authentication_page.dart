@@ -68,7 +68,14 @@ class _LoginAuthenticationPageState extends State<LoginAuthenticationPage> {
                     labelStyle: TextStyle(color: Colors.white),
                     labelText: 'Senha',
                     hintStyle: TextStyle(color: Colors.white),
-                    hintText: 'Digite sua senha'
+                    hintText: 'Digite sua senha',
+                    suffixIcon: InkWell(
+                      child: Icon(
+                        Icons.visibility,
+                        size: 30,
+                        color: Colors.white,
+                      ),
+                    ),    
                 ), // InputDecoration,
                 style: TextStyle(
                     color: Color(0xFFFFFFFF),
