@@ -3,6 +3,7 @@ import './modules/login/login_module.dart';
 import './modules/register/register_module.dart';
 import './modules/profile/profile_module.dart';
 import './modules/authentication/login_authentication_module.dart';
+import './modules/listaFichas/lista_module.dart';
 
 class AppModule extends Module {
   @override
@@ -24,6 +25,11 @@ class AppModule extends Module {
     ModuleRoute(
         '/profile', 
         module: ProfileModule(),
+        transition: TransitionType.fadeIn,
+    ),
+    ModuleRoute(
+        '/lista_fichas', 
+        module: ListaFichaModule(),
         transition: TransitionType.fadeIn,
     ),
   ];
