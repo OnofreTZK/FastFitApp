@@ -4,6 +4,7 @@ import './modules/register/register_module.dart';
 import './modules/profile/profile_module.dart';
 import './modules/authentication/login_authentication_module.dart';
 import './modules/listaFichas/lista_module.dart';
+import 'modules/workout/workout_module.dart';
 
 class AppModule extends Module {
   @override
@@ -30,6 +31,11 @@ class AppModule extends Module {
     ModuleRoute(
         '/lista_fichas', 
         module: ListaFichaModule(),
+        transition: TransitionType.fadeIn,
+    ),
+        ModuleRoute(
+        '/workout', 
+        module: WorkoutModule(),
         transition: TransitionType.fadeIn,
     ),
   ];
