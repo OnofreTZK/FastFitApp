@@ -43,9 +43,9 @@ class _LoginAuthenticationPageState extends State<LoginAuthenticationPage> {
                     ),
                     border: OutlineInputBorder(),
                     labelStyle: TextStyle(color: Colors.white),
-                    labelText: 'E-mail',
+                    labelText: 'Usuário',
                     hintStyle: TextStyle(color: Colors.white),
-                    hintText: 'Entre com um e-mail válido'), // InputDecoration
+                    hintText: 'Entre com um usuário válido'), // InputDecoration
                 style: TextStyle(
                   color: Color(0xFFFFFFFF),
                 ), // TextStyle
