@@ -57,7 +57,7 @@ class _ListaFichasState extends State<ListaFichas> {
                           ),
                           child: InkWell(
                             onTap: () async {
-                              Modular.to.pushNamed('/listaFichas/');
+                              Modular.to.pushNamed('/workout/');
                               await showModalBottomSheet(
                                   isScrollControlled: true,
                                   context: context,
@@ -142,7 +142,7 @@ class _ListaFichasState extends State<ListaFichas> {
                           ),
                           child: InkWell(
                             onTap: () async {
-                              Modular.to.pushNamed('/profile/');
+                              //Modular.to.pushNamed('/profile/');
                               await showModalBottomSheet(
                                   isScrollControlled: true,
                                   context: context,
