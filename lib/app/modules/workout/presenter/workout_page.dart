@@ -25,7 +25,7 @@ class _WorkoutPageState extends State<WorkoutPage> {
           color: Colors.white,
         ),
         title: Text(
-          'Segunda',
+          'Treino',
           style: GoogleFonts.poppins(
               color: Colors.white,
               fontSize: 22,
