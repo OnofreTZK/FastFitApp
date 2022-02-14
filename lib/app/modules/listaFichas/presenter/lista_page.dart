@@ -13,27 +13,33 @@ class _ListaFichasState extends State<ListaFichas> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[900],
+      appBar: AppBar(
+        backgroundColor: Color(0xFF090F13),
+        automaticallyImplyLeading: false,
+        leading: IconButton(
+          onPressed: () {
+            Modular.to.pushNamed('/home/');
+          },
+          icon: Icon(Icons.chevron_left_rounded),
+          iconSize: 32,
+          color: Colors.white,
+        ),
+        title: Text(
+          'Treinos',
+          style: GoogleFonts.poppins(
+              color: Colors.white,
+              fontSize: 22,
+              textStyle: Theme.of(context).textTheme.headline6),
+        ),
+        actions: [],
+        centerTitle: false,
+        elevation: 0,
+      ),
+      backgroundColor: Color(0xFF262D34),
       body: SafeArea(
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
-                    child: Text(
-                      'Treinos',
-                      style: GoogleFonts.poppins(
-                          color: Colors.white, fontSize: 50),
-                    ),
-                  )
-                ],
-              ),
-            ),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(20, 60, 10, 0),
               child: Row(

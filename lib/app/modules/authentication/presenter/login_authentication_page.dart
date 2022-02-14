@@ -1,5 +1,6 @@
 import 'package:fastfit/app/modules/home/presenter/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 class LoginAuthenticationPage extends StatefulWidget {
   final String title;
@@ -100,8 +101,7 @@ class _LoginAuthenticationPageState extends State<LoginAuthenticationPage> {
                   color: Colors.white, borderRadius: BorderRadius.circular(20)),
               child: TextButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomePage()));
+                  Modular.to.pushNamed('/home/');
                 },
                 child: Text(
                   'Login',
