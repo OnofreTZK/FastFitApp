@@ -73,6 +73,11 @@ flutter:
     - assets/images/logofastfit2.png
     - assets/images/peso.png
     - assets/images/user_image.png
+    - assets/images/agachamento.jpg
+    - assets/images/alongar.jpg
+    - assets/images/poli.jpg
+    - assets/images/polichinelo.jpg
+    - assets/images/rosca.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

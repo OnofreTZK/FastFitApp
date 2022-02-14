@@ -44,7 +44,7 @@ class _DescriptionWorkoutPageState extends State<DescriptionWorkoutPage> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Image.asset(
-                  'assets/images/gym2.jpg',
+                  'assets/images/poli.jpg',
                   width: MediaQuery.of(context).size.width,
                   height: 230,
                   fit: BoxFit.cover,
@@ -58,7 +58,7 @@ class _DescriptionWorkoutPageState extends State<DescriptionWorkoutPage> {
                 children: [
                   Expanded(
                     child: Text(
-                      'Exercício 1',
+                      'Polichinelo',
                       style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 22,
