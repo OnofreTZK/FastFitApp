@@ -145,7 +145,7 @@ class _WorkoutPageState extends State<WorkoutPage> {
                                               BorderRadius.circular(10)),
                                       child: TextButton(
                                         onPressed: () {
-                                          //Modular.to.pushNamed('//');
+                                          Modular.to.pushNamed('/description-workout/');
                                         },
                                         child: Text(
                                           'Mais informações',

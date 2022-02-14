@@ -1,3 +1,4 @@
+import 'package:fastfit/app/modules/descriptionWorkout/description_workout_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import './modules/login/login_module.dart';
 import './modules/register/register_module.dart';
@@ -14,30 +15,34 @@ class AppModule extends Module {
   final List<ModularRoute> routes = [
     ModuleRoute(Modular.initialRoute, module: LoginModule()),
     ModuleRoute(
-        '/authentication', 
-        module: LoginAuthenticationModule(),
-        transition: TransitionType.fadeIn,
+      '/authentication',
+      module: LoginAuthenticationModule(),
+      transition: TransitionType.fadeIn,
     ),
     ModuleRoute(
-        '/register', 
-        module: RegisterModule(),
-        transition: TransitionType.fadeIn,
+      '/register',
+      module: RegisterModule(),
+      transition: TransitionType.fadeIn,
     ),
     ModuleRoute(
-        '/profile', 
-        module: ProfileModule(),
-        transition: TransitionType.fadeIn,
+      '/profile',
+      module: ProfileModule(),
+      transition: TransitionType.fadeIn,
     ),
     ModuleRoute(
-        '/lista_fichas', 
-        module: ListaFichaModule(),
-        transition: TransitionType.fadeIn,
+      '/lista_fichas',
+      module: ListaFichaModule(),
+      transition: TransitionType.fadeIn,
     ),
-        ModuleRoute(
-        '/workout', 
-        module: WorkoutModule(),
-        transition: TransitionType.fadeIn,
+    ModuleRoute(
+      '/workout',
+      module: WorkoutModule(),
+      transition: TransitionType.fadeIn,
+    ),
+    ModuleRoute(
+      '/description-workout',
+      module: DescriptionWorkoutModule(),
+      transition: TransitionType.fadeIn,
     ),
   ];
-
 }
