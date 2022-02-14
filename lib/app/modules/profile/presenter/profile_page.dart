@@ -13,7 +13,29 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[900],
+      appBar: AppBar(
+        backgroundColor: Color(0xFF090F13),
+        automaticallyImplyLeading: false,
+        leading: IconButton(
+          onPressed: () {
+            Modular.to.pushNamed('/home/');
+          },
+          icon: Icon(Icons.chevron_left_rounded),
+          iconSize: 32,
+          color: Colors.white,
+        ),
+        title: Text(
+          'Dados Pessoais',
+          style: GoogleFonts.poppins(
+              color: Colors.white,
+              fontSize: 22,
+              textStyle: Theme.of(context).textTheme.headline6),
+        ),
+        actions: [],
+        centerTitle: false,
+        elevation: 0,
+      ),
+      backgroundColor: Color(0xFF262D34),
       body: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.max,
@@ -23,9 +45,9 @@ class _ProfilePageState extends State<ProfilePage> {
               children: [
                 Container(
                     width: MediaQuery.of(context).size.width,
-                    height: 260,
+                    height: 200,
                     decoration: BoxDecoration(
-                      color: Colors.blueGrey[800],
+                      color: Color(0xFF262D34),
                     ),
                     child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
@@ -34,7 +56,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         children: [
                           Padding(
                             padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 60, 0, 0),
+                                EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -114,7 +136,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                             ),
                                             onPressed: () async {
                                               //rota para tela de login e registro
-                                              //await Modular.to.pushNamed('//');
+                                               Modular.to.pushNamed('/authentication/');
                                             },
                                           ),
                                         ),
@@ -182,21 +204,6 @@ class _ProfilePageState extends State<ProfilePage> {
             Column(
               mainAxisSize: MainAxisSize.max,
               children: [
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(20, 10, 10, 0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Text(
-                        'Dados pessoais',
-                        style: GoogleFonts.poppins(
-                            color: Colors.grey[400],
-                            fontSize: 25,
-                            textStyle: Theme.of(context).textTheme.subtitle2),
-                      ),
-                    ],
-                  ),
-                ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
                   child: TextFormField(
@@ -368,56 +375,10 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
-                  child: TextFormField(
-                    //controller: yourAilmentsController ??=
-                    //   TextEditingController(
-                    // text: editProfileUsersRecord.ailments,
-                    //),
-                    obscureText: false,
-                    decoration: InputDecoration(
-                      labelText: 'Comentários',
-                      labelStyle: GoogleFonts.poppins(
-                          color: Colors.grey[400],
-                          fontSize: 15,
-                          textStyle: Theme.of(context).textTheme.subtitle2),
-                      hintText:
-                          'Comente aqui sobre algum impedimento ou problema de saúde',
-                      hintStyle: GoogleFonts.poppins(
-                          color: Colors.grey[400],
-                          fontSize: 15,
-                          textStyle: Theme.of(context).textTheme.subtitle2),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color(0x00000000),
-                          width: 1,
-                        ),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color(0x00000000),
-                          width: 1,
-                        ),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      filled: true,
-                      fillColor: Colors.black,
-                      contentPadding:
-                          EdgeInsetsDirectional.fromSTEB(20, 15, 20, 15),
-                    ),
-                    style: GoogleFonts.poppins(
-                        color: Colors.grey[400],
-                        fontSize: 15,
-                        textStyle: Theme.of(context).textTheme.subtitle2),
-                    maxLines: 3,
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 18, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 55, 0, 0),
                   child: Container(
-                    height: 40,
-                    width: 150,
+                    height: 60,
+                    width: 250,
                     decoration: BoxDecoration(
                         color: Colors.white70,
                         borderRadius: BorderRadius.circular(20)),
@@ -438,7 +399,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         'Salvar mudanças',
                         style: GoogleFonts.poppins(
                             color: Colors.black,
-                            fontSize: 15,
+                            fontSize: 20,
                             textStyle: Theme.of(context).textTheme.headline6),
                       ),
                     ),

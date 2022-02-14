@@ -1,4 +1,5 @@
 import 'package:fastfit/app/modules/descriptionWorkout/description_workout_module.dart';
+import 'package:fastfit/app/modules/home/home_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import './modules/login/login_module.dart';
 import './modules/register/register_module.dart';
@@ -22,6 +23,11 @@ class AppModule extends Module {
     ModuleRoute(
       '/register',
       module: RegisterModule(),
+      transition: TransitionType.fadeIn,
+    ),
+    ModuleRoute(
+      '/home',
+      module: HomeModule(),
       transition: TransitionType.fadeIn,
     ),
     ModuleRoute(

@@ -14,20 +14,28 @@ class _WorkoutPageState extends State<WorkoutPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blueGrey[900],
+        backgroundColor: Color(0xFF090F13),
         automaticallyImplyLeading: false,
+        leading: IconButton(
+          onPressed: () {
+            Modular.to.pushNamed('/lista_fichas/');
+          },
+          icon: Icon(Icons.chevron_left_rounded),
+          iconSize: 32,
+          color: Colors.white,
+        ),
         title: Text(
           'Treino X',
           style: GoogleFonts.poppins(
               color: Colors.white,
-              fontSize: 30,
+              fontSize: 22,
               textStyle: Theme.of(context).textTheme.headline6),
         ),
         actions: [],
         centerTitle: false,
         elevation: 0,
       ),
-      backgroundColor: Colors.blueGrey[900],
+      backgroundColor: Color(0xFF262D34),
       floatingActionButton: Visibility(
         //visible: eventsPageGuestsRecord.admin ?? true,
         child: FloatingActionButton(
@@ -145,7 +153,8 @@ class _WorkoutPageState extends State<WorkoutPage> {
                                               BorderRadius.circular(10)),
                                       child: TextButton(
                                         onPressed: () {
-                                          Modular.to.pushNamed('/description-workout/');
+                                          Modular.to.pushNamed(
+                                              '/description-workout/');
                                         },
                                         child: Text(
                                           'Mais informações',

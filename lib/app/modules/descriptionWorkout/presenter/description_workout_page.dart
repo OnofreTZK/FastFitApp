@@ -31,6 +31,9 @@ class _DescriptionWorkoutPageState extends State<DescriptionWorkoutPage> {
               fontSize: 22,
               textStyle: Theme.of(context).textTheme.headline6),
         ),
+        actions: [],
+        centerTitle: false,
+        elevation: 0,
       ),
       backgroundColor: Color(0xFF262D34),
       body: SingleChildScrollView(
